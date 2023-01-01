@@ -1,0 +1,60 @@
+[此储存库](https://github.com/STARTRACEX/STARTRACEX.github.io) 储存了基于gin的web服务
+
+以下是自述文档
+
+# 站点
+
+## 前要
+
+### 安装
+
+- 需要**go**[建议1.18或更新]
+- 需要依赖[通过下列命令快速安装]
+
+```shell copy
+go mod tidy
+```
+
+### 修改环境变量
+
+```shell copy
+# 更改为Linux
+$env:GOOS="linux"
+
+# 更改为Windows
+$env:GOOS="windows"
+```
+
+### 修改配置项
+
+在 ./setting/setting.go 中更改基本配置
+
+在setting.ConfigPath指定的文件中通过文件配置(可选,如果存在将覆盖前者),可按照./config/.cjson为模板
+
+### 关联目录
+
+编译后的可执行文件与这些目录关联
+
+```shell
+├─public
+│  └─...
+├─config
+└─views
+   └─...
+```
+
+## 运行
+
+运行
+
+```shell copy
+go run ./main.go
+```
+
+**或者**编译并执行
+
+```shell copy
+go build ./main.go
+
+./main.exe 或 ./main
+```

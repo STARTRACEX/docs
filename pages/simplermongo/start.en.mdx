@@ -1,0 +1,76 @@
+# go-SimplerMongo
+
+## First
+
+_For easier operation [Mongodb Atlas](https://www.mongodb.com/atlas)The construction of this package is not perfect at present_
+
+_For details of Mongodb operations, please go to [MongoDB Go Driver Go](https://www.mongodb.com/docs/drivers/go/v1.8/)_
+
+## Introduction
+
+Install this package
+
+```shell copy
+go get github.com/STARTRACEX/go-SimplerMongo
+```
+
+Introduced in the project
+
+```go copy
+import (
+
+"fmt"
+"go.mongodb.org/mongo-driver/bson"
+FUNCNAME "github.com/STARTRACEX/go-SimplerMongo"
+)
+```
+
+or
+
+Copy dbfunc.go to your directory and install non-existent package dependencies (if any)
+
+```shell copy
+go mod tidy
+```
+
+## Initialize
+
+```go
+const URI = "Connection uri ....... "
+defer func() {
+if r := recover(); r != nil {
+fmt.Println("Received panic:", r)
+}
+}()
+
+client := FUNCNAME.InitClientWithOptions(URI)
+collection := client.Database("...").Collection("...")
+defer FUNCNAME.CloseClient(client)
+
+/*
+...
+*/
+```
+
+## Partial preview
+
+```go
+// Incoming connection address, initializing and returning to client
+func InitClient(URI string) *mongo.Client
+// Incoming connection address, periodically initialized and returned to the client
+func InitClientWithOptions(URI string) *mongo.Client
+// Close the client and return an error
+func CloseClient(client *mongo.Client) error
+// Find the first data satisfying the filter and return
+func Find(collection *mongo.Collection, filter interface{}) primitive.M
+// Find the data satisfying the filter and return
+func FindM(collection *mongo.Collection, filter interface{}) []primitive.M
+// Add a data
+func Add(collection *mongo.Collection, data interface{})
+// Add Multiple Data
+func AddM(collection *mongo.Collection, data []interface{})
+// Update the data that meets the filter to update, and return the number of modifications
+func Update(collection *mongo.Collection, filter, update interface{}) int64
+// Delete the data that meets the filter and return the number of deletions
+func Delete(collection *mongo.Collection, filter interface{}) int64
+```

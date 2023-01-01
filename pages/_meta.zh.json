@@ -1,0 +1,22 @@
+{
+  "index": "概述",
+  "gin": "Gin",
+  "simplermongo": "SimplerMongo",
+  "mdsitebuilder": "MDSiteBuilder",
+  "css-godown": "css-godown",
+  "built-with": "Built with",
+  "overview": {
+    "title": "Overview",
+    "type": "page"
+  },
+  "Next": {
+    "type": "page",
+    "href": "https://next.startrace.games/",
+    "newWindow": true
+  },
+  "Guide": {
+    "type": "page",
+    "href": "https://guide.startrace.games/",
+    "newWindow": true
+  }
+}

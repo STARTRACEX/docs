@@ -1,0 +1,92 @@
+# 示例
+
+应用程序的编译后可执行文件位于./bin下
+
+运行并修改启动参数
+```shell
+main.exe/main -p <port> -d <domail>
+```
+
+如果你熟悉go，可以更改源代码修改更多配置，基本配置位于./config/setting.go,各个模块的功能位于model文件夹下
+
+这些功能位于./model
+
+## 类型
+
+```go
+// md文件的元数据结构
+type baseconfig struct {
+	Title   string   `yaml:"title,omitempty"`
+	Author  string   `yaml:"author,omitempty"`
+	Authors []string `yaml:"authors,omitempty"`
+	Summary string   `yaml:"summary,omitempty"`
+	Date    string   `yaml:"date,omitempty"`
+	Update  string   `yaml:"update,omitempty"`
+}
+
+// 渲染文档的元数据结构
+type Post struct {
+	Title      string // Undefined
+	Date       string // Unknown
+	Update     string // Unknown
+	Summary    string //
+	Author     template.HTML //
+	Body       template.HTML // 
+	OriginFile string // Origin File Path
+}
+
+// 目录文件数据结构
+type Cata struct {
+	Name  string
+	Super string
+	Level string
+}
+```
+
+## 功能类
+
+```go
+func RenderMarkdown(mdFilePath string) Post {}
+```
+
+此功能将地址传入，判断其地址是否可用，并调用ReadMarkdown()读取存在的文件
+
+```go
+if path.Ext(mdFilePath) != ".md" || path.Ext(mdFilePath) != "" {
+		c.Abort()
+	}
+	source := config.PostsPath + "/" + mdFilePath + ".md"
+	if !IsExist("." + source) {
+		source = config.PostsPath + "/" + mdFilePath + "index.md"
+		if !IsExist("." + source) {
+			source = config.PostsPath + "/" + mdFilePath + "/index.md"
+			if !IsExist("." + source) {
+				source = config.PostsPath + "/" + mdFilePath
+			}
+		}
+	}
+```
+匹配存在文件的逻辑如上所示，同 `URL作为路径` 第一条
+
+```go
+func RenderPost(c *gin.Context) {}
+```
+
+此功能将会合并"lang"与请求路径为地址解析文档，并通过RenderMarkdown()渲染至HTML
+
+```go
+func RenderCatalog(DirectoryFilePath string) []Cata {}
+```
+
+此功能将读取传入的DirectoryFilePath并以"\\"为分割符号,分割缩进等级，标题，URL路径，返回分割完毕的数据切片
+
+```go
+func getMeta(data string) (string, int) {}
+
+func getTitie(data string) string {}
+```
+这两个功能通过正则匹配内容
+
+getMeta使用 `---([\s\S]*?\n)---` 返回data中的元数据和元数据所占的长度
+
+getTitle使用 `(#)[^\n]*?\n` 返回data中一级标题

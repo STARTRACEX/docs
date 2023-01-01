@@ -1,0 +1,28 @@
+# Example
+
+```go copy
+//Find {fild: [{v1:1}...]}
+FUNCNAME.Find(collection, bson.D{{Key: "field", Value: bson.D{{Key: "v1", Value: "1"}}}})
+FUNCNAME.FindM(collection, bson.D{{Key: "field", Value: bson.D{{Key: "v1", Value: "1"}}}})
+FUNCNAME.FindOne(collection, "field",bson.D{{Key: "v1", Value: "1"}})
+
+
+//Add {name: "@ ···"}
+FUNCNAME.Add(collection, bson.D{{Key:"name",Value:"@···"}}
+
+//Add {name: "@ ···"}, {name: "# ···"}
+docs := []interface{}{bson.D{{Key:"name", Value:"@···"}},bson.D{{Key:"name", Value:"#···"}}}
+FUNCNAME.AddM(collection, docs)
+
+
+//Update [{v1:1}...]... {name: "@ ···"} to [{v1:1}...]... {name: "@ ···"}
+update := bson.D{{Key: "$set", Value: bson.D{{Key: "name", Value: "@···"}}}}
+filter := bson.D{{Key: "v1", Value: 1}}
+FUNCNAME.FindUpdate(collection, filter, update)
+
+
+//Replace [{name: "@ ···"}...] with [{name: "# ···"}, {age: 1649}]
+filter := bson.D{{Key: "name", Value: "@···"}}
+replacement := bson.D{{Key: "name", Value: "#···"},{Key: "age",Value: 1649}}
+FUNCNAME.FindReplace(collection, filter, replacement)
+```

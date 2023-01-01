@@ -1,0 +1,62 @@
+[This repo](https://github.com/STARTRACEX/STARTRACEX.github.io) saved a gin based service
+
+The following is the readme document
+
+# site
+
+## First
+
+### Installation
+
+- **go** required [Recommendation 1.18 or later]
+- You need to rely on [Quick installation through the following command]
+
+```shell copy
+go mod tidy
+```
+
+### Modify environment variables
+
+```shell copy
+#Change to Linux
+$env:GOOS="linux"
+
+#Change to Windows
+$env:GOOS="windows"
+
+```
+
+### Modify Configuration Item
+
+Change the basic configuration in ./setting/setting.go
+
+Configure in the file specified by setting.ConfigPath (optional,if it exists, the former will be overwritten),and use ./config/.cjson as the template
+
+### Associated Directory
+
+The compiled executable is associated with these directories
+
+```shell
+├─public
+│  └─...
+├─config
+│  └─...
+└─views
+   └─...
+```
+
+## Run
+
+function
+
+```shell copy
+go run ./main.go
+```
+
+**or** compile and execute
+
+```shell copy
+go build ./main.go
+
+./main.exe or./main
+```
