@@ -15,7 +15,7 @@ export default function Card(props) {
       p = "/start"
    }
    return <>
-      <Link href={h + p} className={styles.card}>
+      <Link href={"/" + h + p} className={styles.card}>
          {props.t}
       </Link>
    </>

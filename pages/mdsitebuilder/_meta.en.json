@@ -1,4 +1,6 @@
 {
    "start": "Getting Start",
-   "template":"Example"
+   "rule": "Rule",
+   "func":"Function",
+   "type":"Type"
 }

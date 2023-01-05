@@ -1,4 +1,6 @@
 {
-   "start": "开始使用",
-   "template": "示例"
+   "start": "开始",
+   "rule": "规则",
+   "func": "功能",
+   "type": "类型"
 }

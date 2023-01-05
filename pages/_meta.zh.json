@@ -1,14 +1,10 @@
 {
   "index": "概述",
-  "gin": "Gin",
+  "gin": "With-Gin",
   "simplermongo": "SimplerMongo",
   "mdsitebuilder": "MDSiteBuilder",
   "css-godown": "css-godown",
-  "built-with": "Built with",
-  "overview": {
-    "title": "Overview",
-    "type": "page"
-  },
+  "sim": "SIM",
   "Next": {
     "type": "page",
     "href": "https://next.startrace.games/",
