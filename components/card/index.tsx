@@ -20,3 +20,14 @@ export default function Card(props) {
       </Link>
    </>
 }
+
+export function Cards() {
+   return <>
+      <Card t="G-lit" s />
+      <Card t="Gin" s />
+      <Card t="SimplerMongo" s />
+      <Card t="MDSiteBuilder" s />
+      <Card t="css-godown" />
+      <Card t="SIM" />
+   </>
+}

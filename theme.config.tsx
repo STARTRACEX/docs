@@ -4,7 +4,7 @@ import Footer from "./components/footer"
 const config: DocsThemeConfig = {
   head: () => {
     return <>
-      <link rel="shortcut icon " type="images/x-icon" href="./favicon.ico"/>
+      <link rel="shortcut icon" type="images/x-icon" href="./favicon.ico"/>
     </>
   },
   useNextSeoProps() {

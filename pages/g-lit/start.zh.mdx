@@ -1,0 +1,52 @@
+# G-lit
+
+G-lit 是基于[lit](https://lit.dev)的组件集合
+
+## 快速开始
+
+### 引入
+
+将此存储库中包含的js文件导入页面
+
+```html
+<!-- import one -->
+<script type="module" src="./public/lit/sign-form.js"></script>
+<!-- import all -->
+<script type="module" src="./public/lit.all.js"></script>
+```
+
+**注意** 不要忘记添加 `type="module"`
+
+### 引入lit
+
+**注意** 如果使用导入外部文件的方法,请更改导入lit-core和lit-all的路径(当前lit位于public/core中)
+
+## 组件
+
+### label-input.js
+
+label-input.js 包含一个自适应的输入框
+
+### sign-form.js
+
+sign-form.js  包含一个登录/注册表单,以及label-input.js的全部内容
+
+### nav-layout.js
+
+nav-layout.js 包含默认导航和可选底部
+
+### ov-effect.js
+
+ov-effect.js 包含渐变背景框,渐变文本和渐变边框的基本按钮
+
+### search-input.js
+
+search-input.js 包含一个多功能搜索框,用于通过页面或服务器或网络获取内容,以及一个附加的ms风格web搜索框
+
+### content-group.js
+
+content-group.js 包含一个可打开的显示组,一个grid展示的可排序内容组
+
+## all.js
+
+all.js的内容很简单,它引入了所有的组件(不导出任何内容)

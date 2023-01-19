@@ -1,0 +1,28 @@
+# Groups
+
+## section-group
+
+section-group contains an openable display content box
+
+|propties|type|default|desc|
+|---|---|---|---|
+|index|string|first children|Index of content|
+|split|boolean|false|Enable default split|
+
+Elements with the same value of slot and index will be displayed in the first rendering
+
+Nothing will be opened at the first rendering if split is' `true` . which is consistent with the behavior of repeatedly selecting sub-items
+
+## content-group
+
+content-group contains a content sorted by grid
+
+|propties|type|default|desc|
+|---|---|---|---|
+|sort|string|""|Basis  for sorting|
+|col|string|"" (or "1fr 1fr")|value of "grid-template-columns"|
+
+
+If sort is not `""`, the child elements will be sorted in positive order according to the value of sort. The child elements need to have the same attributes as the value of sort and can be converted into numbers
+
+The value of coll will be assigned to the `grid template columns` of the direct container, and its default value is the same as the "1fr 1fr" effect (divided equally into two columns)

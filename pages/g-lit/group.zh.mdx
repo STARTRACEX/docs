@@ -1,0 +1,28 @@
+# 组
+
+## section-group
+
+section-group 包含一个可打开的显示组
+
+|属性|类型|默认值|desc|
+|---|---|---|---|
+|index|string|第一个子元素|起始索引|
+|split|boolean|false|默认分割|
+
+第一次渲染时将会显示具有slot的值与index的值相同的元素
+
+如果split为 `true` 将会在第一次渲染时不打开任何内容,这与重复选择子项的行为一致
+
+
+## content-group
+
+content-group 包含一个grid展示的可排序内容组
+
+|属性|类型|默认值|desc|
+|---|---|---|---|
+|sort|string|""|排序依据|
+|col|string|"" (或"1fr 1fr")|"grid-template-columns"的值|
+
+如果sort不为 `""` 将会根据sort的值对子元素进行正序排序,需要子元素具有与sort的值相同的属性,并可被转化为数字
+
+coll的值将会被赋值给直接容器的 `grid-template-columns` ,其默认值与"1fr 1fr"效果(均分两列)相同
