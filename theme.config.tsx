@@ -21,7 +21,7 @@ const config: DocsThemeConfig = {
   project: {
     link: 'https://github.com/STARTRACEX',
     },
-  docsRepositoryBase: 'https://github.com/STARTRACEX/nextapp-docs/blob/main',
+  docsRepositoryBase: 'https://github.com/STARTRACEX/docs/blob/main',
   footer: {
     component: Footer
   },
