@@ -9,12 +9,28 @@ label-input.js contains an adaptive input
 |propties|type|default|desc|
 |---|---|---|---|
 |label|string|""|Display the value of label|
-|name|string|""|Name of input
+|type|string|"text"|Type of input|
+|name|string|laebl or type|Name of input
 |id|string|label|Id of input|
 |pla|string|""|Placeholder of input|
-|type|string|"text"|Type of input|
 |def|string|""|Default value of input|
 |value|string|def|Value of input|
+
+### base-input
+
+base-input contains a basic input box
+
+The attribute contains all the attributes of label-input and the available attributes of input
+
+### exp-input
+
+exp-input contains the style extension of a common input box
+
+The attribute contains all attributes of label-input and the following
+
+|propties|type|default|desc|
+|base|string|""|Expand style type|
+|offset|string|"0"|Legend horizontal offset|
 
 ### search-input
 
@@ -34,10 +50,6 @@ If remote is `false`, it will search from the document Search the input value fr
 
 If remote is `true`, set the remote address If infer is `true` , an inference list will be displayed, which can be obtained remotely
 
-### search-ms
-
-search-ms contains a ms style web search box
-
 ## Forms
 
 ### sign-form
@@ -48,6 +60,19 @@ sign-form contains an login/registration form
 |---|---|---|---|
 |method|string|"post"|Form method|
 |reset|boolean|false|Enable reset function|
+|submit|function|()=>{}|Submit|
+
 
 If reset is `true` a reset button will be added
 
+### search-w
+
+Search-w contains a collection of major search engines
+
+
+|propties|type|default|desc|
+|---|---|---|---|
+|origin|string|I don't know|Name of engine|
+|action|string|I don't know|Address of engine|
+|pla|string|I don't know|Placeholder of input|
+|name|string|I don't know|Name of input|

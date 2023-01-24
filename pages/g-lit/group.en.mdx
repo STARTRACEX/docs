@@ -1,5 +1,16 @@
 # Groups
 
+## button-group
+
+buttton-group will adapt internal buttons and other contents
+
+|propties|type|default|desc|
+|---|---|---|---|
+|h|boolean|false|Disable horizontal internal fillets|
+|v|boolean|false|Disable vertical internal fillets|
+
+Use slot elements with names of `pre` and `suf` to specify the front and back (up and down) elements
+
 ## section-group
 
 section-group contains an openable display content box
@@ -7,7 +18,9 @@ section-group contains an openable display content box
 |propties|type|default|desc|
 |---|---|---|---|
 |index|string|first children|Index of content|
-|split|boolean|false|Enable default split|
+|split|boolean|false|Enable split|
+|v|boolean|false|Enable vertical|
+|reverse|boolean|false|Enable reverse|
 
 Elements with the same value of slot and index will be displayed in the first rendering
 

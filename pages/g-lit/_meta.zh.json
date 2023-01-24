@@ -3,5 +3,6 @@
   "input-form": "输入/表单",
   "layout": "布局",
   "group": "组",
-  "effect": "效果"
+  "effect": "效果",
+  "button":"按钮"
 }

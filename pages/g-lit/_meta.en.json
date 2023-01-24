@@ -3,5 +3,6 @@
   "input-form": "Input/Forms",
   "layout": "Layout",
   "group": "Groups",
-  "effect": "Effect"
+  "effect": "Effect",
+  "button": "Button"
 }

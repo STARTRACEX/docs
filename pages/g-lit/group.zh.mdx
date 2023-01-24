@@ -1,18 +1,30 @@
 # 组
 
+## button-group
+
+button-group 会适应内部的按钮和其他内容
+
+|属性|类型|默认值|描述|
+|---|---|---|---|
+|h|boolean|false|禁用水平内部圆角|
+|v|boolean|false|禁用垂直内部圆角|
+
+使用name为`pre`和`suf`的slot元素来指定前后(上下)元素
+
 ## section-group
 
 section-group 包含一个可打开的显示组
 
-|属性|类型|默认值|desc|
+|属性|类型|默认值|描述|
 |---|---|---|---|
 |index|string|第一个子元素|起始索引|
-|split|boolean|false|默认分割|
+|split|boolean|false|启用分割|
+|v|boolean|false|启用垂直|
+|reverse|boolean|false|启用反向|
 
 第一次渲染时将会显示具有slot的值与index的值相同的元素
 
 如果split为 `true` 将会在第一次渲染时不打开任何内容,这与重复选择子项的行为一致
-
 
 ## content-group
 
