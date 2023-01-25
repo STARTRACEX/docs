@@ -9,10 +9,5 @@
     "type": "page",
     "href": "https://next.startrace.games",
     "newWindow": true
-  },
-  "Guide": {
-    "type": "page",
-    "href": "https://guide.startrace.games/",
-    "newWindow": true
   }
 }
