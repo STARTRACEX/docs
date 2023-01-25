@@ -1,0 +1,31 @@
+# Items
+
+## base-button
+
+base-button 是普通按钮
+
+|属性|类型|默认值|描述|
+|---|---|---|---|
+|disabled|Boolean|false|禁用按钮|
+|round|Boolean|false|圆角按钮|
+|ghost|Boolean|false|幽灵按钮|
+|color|string|""|色调|
+
+使用名称为`pre`和`suf`的slot元素指定前置元素和后置元素
+
+如果使用多个按钮,可以使用[`button-group`](./group#button-group)
+
+## base-switch
+
+base-switch 是普通开关(checkbox input)
+
+|属性|类型|默认值|描述|
+|---|---|---|---|
+|disabled|Boolean|false|禁用输入|
+|checked|boolean|false|Input checked (覆盖def)|
+|fat|boolean|false|使用fat样式 (默认为 rect)|
+|def|string|"false"|默认值(将尝试解析字符传)|
+|name|string|"checkbox"|Input name|
+|value|string|"on"|Input value|
+
+使用 name 为 `true` , `false` , `always` 的 slot 元素为不同的选择设置显示项

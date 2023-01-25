@@ -1,21 +1,47 @@
 # G-lit
 
-G-lit 是基于[lit](https://lit.dev)的组件集合
+这是基于[lit](https://lit.dev)的组件集合
 
 ## 快速开始
 
-### 引入
+### 导入文件
 
 将此存储库中包含的js文件导入页面
 
 ```html
-<!-- import one -->
-<script type="module" src="./public/lit/sign-form.js"></script>
-<!-- import all -->
-<script type="module" src="./public/lit.all.js"></script>
+<!-- 导入一个-->
+<script type="module"src="./public/lit/sign-form.js"></script>
+<!-- 全部导入-->
+<script type="module"src="./public/lit.all.js"></script>
 ```
 
-**注意** 不要忘记添加 `type="module"`
+**注意** 不要忘记 `type="module"`
+
+### 用于 npm
+
+位于分支`npm`中
+
+**注意** 未发布
+
+## 配置
+
+从配置文件导入`{name}`
+
+然后添加以下代码
+
+```js
+/* ... */
+name.prefix = "";
+name.suffix = "";
+```
+
+如果在html中,则需要`type="module"`
+
+```html
+<script type="module">
+/* ... */
+</script>
+```
 
 ### 引入lit
 
@@ -23,31 +49,36 @@ G-lit 是基于[lit](https://lit.dev)的组件集合
 
 [文档(译)](https://lit-cn.startrace.games/docs/getting-started/)
 
-**注意** 如果使用导入外部文件的方法,请更改导入lit-core和lit-all的路径(当前lit位于public/core中)
+**注意**
+如果使用导入外部文件的方法,请更改导入lit-core和lit-all的路径(当前lit位于public/core中)
 
 ## 组件
 
-### label-input.js
+### input-form
 
 [label-input](./input-form#label-input)
 
-label-input.js 包含一个自适应的输入框
+[base-input](./input-form#base-input)
 
-### sign-form.js
+[exp-input](./input-form#exp-input)
 
 [sign-form](./input-form#sign-form)
 
 [label-input](./input-form#label-input)
 
-sign-form.js 包含一个登录/注册表单,以及label-input.js的全部内容
+[search-input](./input-form#search-input)
 
-### nav-layout.js
+[search-w](./input-form#search-w)
+
+### layout
 
 [nav-layout](./layout#nav-layout)
 
-nav-layout.js 包含默认导航和可选底部
+[asidenav-layout](./layout#asidenav-layout)
 
-### ov-effect.js
+[divier-line](./layout#divier-line)
+
+### effect
 
 [ov-text](./effect#ov-text)
 
@@ -55,22 +86,10 @@ nav-layout.js 包含默认导航和可选底部
 
 [ov-button](./effect#ov-button)
 
-ov-effect.js 包含渐变背景框,渐变文本和渐变边框的基本按钮
+### groups
 
-### search-input.js
+[button-group](./group#button-group)
 
-[search-input](./input-form#search-input)
-
-search-input.js 包含一个多功能搜索框,用于通过页面或服务器或网络获取内容,以及一个附加的ms风格web搜索框
-
-### content-group.js
-
-[section](./group#section-group)
+[section-group](./group#section-group)
 
 [content-group](./group#content-group)
-
-content-group.js 包含一个可打开的显示组,一个grid展示的可排序内容组
-
-## all.js
-
-all.js的内容很简单,它引入了所有的组件(不导出任何内容)

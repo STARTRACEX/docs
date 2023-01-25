@@ -4,7 +4,7 @@ G-lit is a set of components based on [lit](https://lit.dev)
 
 ## Quick Start
 
-### Import this
+### Import File
 
 Import the js file contained in this repository into the page
 
@@ -15,37 +15,61 @@ Import the js file contained in this repository into the page
 <script type="module" src="./public/lit.all.js"></script>
 ```
 
-**Note** Don't forget flag `type="module"`
+**Note** Don't forget `type="module"`
 
-### Import lit
+### In npm
 
-[Docs](https://lit.dev/docs/getting-started/)
+on branch [npm]
 
-**Note** If use the method of importing external files, change the path of importing lit-core and lit-all in the file (currently lit is in public/core)
+**Note** Unpublished
+
+## Config
+
+Import `{name}` from config file 
+
+Then add the following code
+
+```js
+/* ... */
+name.prefix = "";
+name.suffix = "";
+```
+
+If in html, `type="module"` is required
+
+```html
+<script type="module">
+  /* ... */
+</script>
+```
 
 ## Components
 
-### label-input.js
+### input-form
 
 [label-input](./input-form#label-input)
 
-label-input.js contains an adaptive input
+[base-input](./input-form#base-input)
 
-### sign-form.js
+[exp-input](./input-form#exp-input)
 
 [sign-form](./input-form#sign-form)
 
 [label-input](./input-form#label-input)
 
-sign-form.js contains a login/registration form and all contents of label-input.js
+[search-input](./input-form#search-input)
 
-### nav-layout.js
+[search-w](./input-form#search-w)
+
+### layout
 
 [nav-layout](./layout#nav-layout)
 
-nav-layout.js contains a default navigation bar, which can contain the footer
+[asidenav-layout](./layout#asidenav-layout)
 
-### ov-effect.js
+[divier-line](./layout#divier-line)
+
+### effect
 
 [ov-text](./effect#ov-text)
 
@@ -53,22 +77,10 @@ nav-layout.js contains a default navigation bar, which can contain the footer
 
 [ov-button](./effect#ov-button)
 
-ov-effect.js contains an adaptive gradient background box, a quick generation of gradient text, and a basic button for gradient border
+### groups
 
-### search-input.js
+[button-group](./group#button-group)
 
-[search-input](./input-form#search-input)
-
-search-input.js contains a multi-function search box to obtain content through the page or server or network and an additional web search box
-
-### content-group.js
-
-[section](./group#section-group)
+[section-group](./group#section-group)
 
 [content-group](./group#content-group)
-
-content-group.js contains an openable display content box, a content sorted by grid
-
-## all.js
-
-all.js's content is simple. It imported all components (no content is exported)

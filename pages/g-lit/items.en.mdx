@@ -1,0 +1,31 @@
+# Items
+
+## base-button
+
+base-button ss a normal button
+
+|propties|type|default|desc|
+|---|---|---|---|
+|disabled|boolean|false|Disable button|
+|round|boolean|false|Round button|
+|ghost|boolean|false|Ghost button|
+|color|string|""|Hue|
+
+Use slot elements with names of `pre` and `suf` to specify the front and back elements
+
+If multiple buttons are used, can use [`button-group`](./group#button-group)
+
+## base-switch
+
+base-swtch is a normal switch (checkbox input)
+
+|propties|type|default|desc|
+|---|---|---|---|
+|disabled|boolean|false|Disable input|
+|checked|boolean|false|Input checked (Overwrite def)|
+|fat|boolean|false|Use fat style (default as rect)|
+|def|string|"false"|Checked by default (Will attempt to parse the string)|
+|name|string|"checkbox"|Input name|
+|value|string|"on"|Input value|
+
+Use slot elements with names of `true` , `false` ,`always` to set display items for different selections
