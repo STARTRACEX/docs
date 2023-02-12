@@ -11,6 +11,17 @@ buttton-group will adapt internal buttons and other contents
 
 Use slot elements with names of `pre` and `suf` to specify the front and back (up and down) elements
 
+## details-group
+
+Details-group is used to support multiple details or detail-item elements
+
+|propties|type|default|desc|
+|---|---|---|---|
+|index|Number|0|Open by default|
+|only|boolean|false|Limit the number of openings to 1|
+
+`reset()`重设初始状态
+
 ## section-group
 
 section-group contains an openable display content box
@@ -34,7 +45,6 @@ content-group contains a content sorted by grid
 |---|---|---|---|
 |sort|string|""|Basis  for sorting|
 |col|string|"" (or "1fr 1fr")|value of "grid-template-columns"|
-
 
 If sort is not `""`, the child elements will be sorted in positive order according to the value of sort. The child elements need to have the same attributes as the value of sort and can be converted into numbers
 
