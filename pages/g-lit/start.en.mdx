@@ -25,21 +25,47 @@ on branch [npm]
 
 ## Config
 
-Import `{name}` from config file 
+### Basic
+
+Import `name` from config file 
 
 Then add the following code
 
 ```js
-/* ... */
-name.prefix = "";
-name.suffix = "";
+import {name} from "...";
+name.prefix = "x";
+name.suffix = "x";
 ```
 
 If in html, `type="module"` is required
 
 ```html
 <script type="module">
-  /* ... */
+  import {name} from "...";
+  name.prefix = "x";
+  name.suffix = "x";
+</script>
+```
+
+### Quickly append elements
+
+Import `append` from config file 
+
+```js
+import { append } from '...';
+```
+
+If in html, add it to the variables available outside the module
+
+```html
+<script type="module">
+  import { append } from '...';
+  window.appendNew = append;
+</script>
+<script>
+  window.onload = () => {
+  appendNew(...);
+}
 </script>
 ```
 

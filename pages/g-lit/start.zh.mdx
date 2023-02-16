@@ -25,21 +25,47 @@
 
 ## 配置
 
-从配置文件导入`{name}`
+## 基本
+
+从配置文件导入`name`
 
 然后添加以下代码
 
 ```js
-/* ... */
-name.prefix = "";
-name.suffix = "";
+import {name} from "...";
+name.prefix = "x";
+name.suffix = "x";
 ```
 
-如果在html中,则需要`type="module"`
+在html中,则需要`type="module"`
 
 ```html
 <script type="module">
-/* ... */
+import {name} from "...";
+name.prefix = "x";
+name.suffix = "x";
+</script>
+```
+
+### 快速追加元素
+
+从配置文件导入 `append`
+
+```js
+import { append } from '...';
+```
+
+在html中,则需要将其添加到模块外部可用的变量中
+
+```html
+<script type="module">
+  import { append } from '...';
+  window.appendNew = append;
+</script>
+<script>
+window.onload = () => {
+  appendNew(...);
+}
 </script>
 ```
 
