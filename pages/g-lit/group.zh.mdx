@@ -1,5 +1,18 @@
 # 组
 
+## avatar-group
+
+avatar-group 用于展示多个avatar-auchor
+
+|属性|类型|默认值|描述|
+|---|---|---|---|
+|rank|boolean|false|启用排名|
+|max|number|0|最大显示数量|
+
+如果max不为0,当avatar-auchor的数量超过max时将会追加一个more并移除冗余元素
+`append(args,bool)` 添加一个avatar-auchor元素,将执行config.append(this,args),bool的值将会设置avatar-auchor空缺的的`call`属性为"left"或"right"
+`subtract()` 移除一个avatar-auchor元素
+
 ## button-group
 
 button-group 会适应内部的按钮和其他内容

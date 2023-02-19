@@ -1,5 +1,18 @@
 # Groups
 
+## avatar-group
+
+avatar-group used to display multiple avatar-auchor
+
+|propties|type|default|desc|
+|---|---|---|---|
+|rank|boolean|false|Enable rank|
+|max|number|0|Maximum display quantity|
+
+If max is not 0, when the number of avatar-anchors exceeds max, a more will be added and redundant elements will be removed
+`append(args,bool)` Add an avatar-anchor element, and config.append (this, args) will be executed. The value of bool will set the missing `call` attribute of avatar-anchor to "left" or "right"
+`subtract()` Remove an avatar-author element
+
 ## button-group
 
 buttton-group will adapt internal buttons and other contents
@@ -20,7 +33,7 @@ Details-group is used to support multiple details or detail-item elements
 |index|Number|0|Open by default|
 |only|boolean|false|Limit the number of openings to 1|
 
-`reset()`重设初始状态
+`reset()` reset the initial state
 
 ## section-group
 

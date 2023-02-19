@@ -62,3 +62,35 @@ If multiple details are used, use [`details group`] (./group # details group)
 |call | string | "info" | style|
 
 You can use `info`, `danger`, `success`, `warning` to set the style, set non-zero `autococlose` or use `close()` to remove
+
+## avatar-anchor
+
+avatar-anchor is a component for creating user instances
+
+|propties|type|default|desc|
+|---|---|---|---|
+|name|string|""|User name displayed when there is no image|
+|src|string|""|Image source|
+|href|string|""|Jump link|
+|gap|boolean|false|Put the slot element at the bottom|
+|more|number|0|Hidden quantity|
+|call|string|"center"|Alignment|
+
+Use the slot element with name `state` to set the status point
+
+Use the slot element with name `bar` to set status bar
+
+If multiple avatar-anchors are used, use[`avatar-group`](./group#avatar-group)
+
+## super-a
+
+super-a 是a的拓展
+
+|propties|type|default|desc|
+|---|---|---|---|
+|href|string|""|Jump link|
+|target|string|""|Jump target|
+|active|string|""|The class name added when pointing to the link to this page|
+|arrow|string|""|Show attached icons|
+
+Use slot elements with names of `pre` and `suf` to specify the front and back elements

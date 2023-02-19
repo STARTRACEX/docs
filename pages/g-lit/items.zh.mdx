@@ -62,3 +62,35 @@ details-item 是details的拓展
 |call|string|"info"|样式|
 
 可以使用`info`,`danger`,`success`,`warning`来设置样式,设置非零的`autoclose`或使用`close()`移除
+
+## avatar-anchor
+
+avatar-anchor 是创建用户实例的组件
+
+|属性|类型|默认值|描述|
+|---|---|---|---|
+|name|string|""|无图像时显示的用户名|
+|src|string|""|图像源|
+|href|string|""|跳转链接|
+|gap|boolean|false|将slot元素至于底层|
+|more|number|0|隐藏的数量|
+|call|string|"center"|对齐方式|
+
+使用 name 为 `state` 的 slot 元素设置状态点
+
+使用 name 为 `bar` 的 slot 元素设置状态栏
+
+如果使用多个avatar-auchor,可以使用[`avatar-group`](./group#avatar-group)
+
+## super-a
+
+super-a 是a的拓展
+
+|属性|类型|默认值|描述|
+|---|---|---|---|
+|href|string|""|跳转链接|
+|target|string|""|跳转方式|
+|active|string|""|在指向链接为此页时添加的类名|
+|arrow|string|""|显示附带的图标|
+
+使用名称为`pre`和`suf`的slot元素指定前置元素和后置元素
